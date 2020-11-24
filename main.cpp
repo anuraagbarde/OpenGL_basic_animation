@@ -90,22 +90,22 @@ int WINAPI WinMain (HINSTANCE hInstance,
                 glPushMatrix ();
                 glTranslatef(0, 0, 0);
                 glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-                glColor3ub(43, 199, 255);
-                glBegin(GL_QUADS);            
-                glVertex2f(-1.0f,1.0f);
-                glVertex2f(-1.0f,0.00f);
-                glVertex2f(1.0f,0.00f);
-                glVertex2f(1.0f,1.00f);
+                
+                float mm = 255;
+                glBegin(GL_QUADS);       
+                glColor3f(69/mm,179/mm,224/mm); glVertex2f(-1.0f,1.0f);
+                glColor3f(201/mm,233/mm,246/mm); glVertex2f(-1.0f,0.00f);
+                glColor3f(201/mm,233/mm,246/mm); glVertex2f(1.0f,0.00f);
+                glColor3f(69/mm,179/mm,224/mm); glVertex2f(1.0f,1.00f);
                 glEnd();
 
                 // lower water 
                 glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-                glColor3ub(13, 0, 191);
                 glBegin(GL_QUADS);            
-                glVertex2f(-1.0f,-1.0f);
-                glVertex2f(-1.0f,0.00f);
-                glVertex2f(1.0f,0.00f);
-                glVertex2f(1.0f,-1.00f);
+                glColor3f(12/mm,164/mm,255/mm);  glVertex2f(-1.0f,-1.0f);
+                glColor3f(0/mm,71/mm,114/mm); glVertex2f(-1.0f,0.00f);
+                glColor3f(0/mm,71/mm,114/mm); glVertex2f(1.0f,0.00f);
+                glColor3f(12/mm,164/mm,255/mm);  glVertex2f(1.0f,-1.00f);
                 glEnd();
 
                 // Layer 2 -sun
@@ -116,7 +116,7 @@ int WINAPI WinMain (HINSTANCE hInstance,
                 GLfloat radius = 0.25f; 
                 GLfloat twicePi = 2*PI;
                 float x=0,y=0;
-                glColor3ub(255, 207, 61);
+                glColor3ub(253, 184, 19);
                 glBegin(GL_TRIANGLE_FAN);
 
                 //glVertex2f(x, y); // center of circle
