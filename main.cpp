@@ -116,7 +116,7 @@ int WINAPI WinMain (HINSTANCE hInstance,
                 GLfloat radius = 0.25f; 
                 GLfloat twicePi = 2*PI;
                 float x=0,y=0;
-                glColor3ub(253, 184, 19);
+                glColor3ub(253, 170 + 0.1*frame, 19);
                 glBegin(GL_TRIANGLE_FAN);
 
                 //glVertex2f(x, y); // center of circle
@@ -129,18 +129,19 @@ int WINAPI WinMain (HINSTANCE hInstance,
                 // left mountain
                 glBegin (GL_TRIANGLES);
                 glColor3f (0.0f, 0.4f, 0.4f);   glVertex2f (-1.0f, 0.0f);
-                glColor3f (1.0f, 0.4f, 0.4f);   glVertex2f (-0.5f, 0.75f); //
+                glColor3f (1.0f, 0.4f + 0.001*frame, 0.4f);   glVertex2f (-0.5f, 0.75f); //
                 glColor3f (1.0f, 0.8f, 0.4f);   glVertex2f (0.0f, 0.0f);  //
                 glEnd ();
                 //right mountain
                 glBegin (GL_TRIANGLES);
                 glColor3f (1.0f, 0.8f, 0.4f);   glVertex2f (-0.5f, 0.0f); //
-                glColor3f (1.0f, 0.4f, 0.4f);   glVertex2f (0.35f, 0.75f); //
+                glColor3f (1.0f, 0.4f + 0.001*frame, 0.4f);   glVertex2f (0.35f, 0.75f); //
                 glColor3f (0.0f, 0.4f, 0.4f);   glVertex2f (1.0f, 0.0f);  
                 glEnd ();
 
                 //layer 4 - boat
 
+                //front boat
                 // boat semi-circle
                 x=0,y=0;
                 glColor3ub(202, 164, 114);
@@ -174,6 +175,7 @@ int WINAPI WinMain (HINSTANCE hInstance,
                 }
                 glEnd();
 
+                
 
 
                 glPopMatrix ();
